@@ -5,9 +5,113 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fbfbfb;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.global-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    max-height: calc(100vh - 55px);
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px 10px 10px 5px;
+}
+
+.chat {
+    padding: 10px;
+    flex-grow: 1;
+    overflow: scroll;
+}
+
+.chat-container .chat-bottom {
+    display: flex;
+}
+
+.chat-bottom input {
+    flex-grow: 1;
+    border-radius: 30px;
+    padding: 0px 20px;
+    border: 1px solid #185bc4;
+}
+
+.send-button {
+    background-color: #185bc4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.3s background-color;
+}
+
+.send-button:hover {
+    background-color: #4d81d4;
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
+    max-width: 300px;
+    margin-bottom: 5px;
+}
+
+.message.left {
+    background-color: #185bc4;
+}
+
+.message.right {
+    align-self: end;
+    background-color: #686868;
+}
+
+.contacts-list-container {
+    width: 30vw;
+    padding: 10px 5px 0px 0px;
+}
+
+.contact-card {
+    background-color: white;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, .3);
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-card.selected {
+    background-color: #185bc4;
+    color: white;
+}
+
+.top-bar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #185bc4;
+    color: white;
+}
+
+.profile-pic {
+    border-radius: 100%;
+    margin-right: 10px;
 }
